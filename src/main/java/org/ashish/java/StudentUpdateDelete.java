@@ -6,47 +6,57 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
+/**
+ * Demonstrates updating and deleting a Student entity using Hibernate.
+ * This class includes the process of initializing a session factory, opening a session,
+ * beginning a transaction, and performing update or delete operations on a Student entity.
+ * Finally, it commits the transaction and closes the session and session factory.
+ */
 public class StudentUpdateDelete {
+
     public static void main(String[] args) {
-        SessionFactory sessionFactory=new Configuration().configure().addAnnotatedClass(Student.class).buildSessionFactory();
-        Session session=null;
-        Transaction transaction=null;
-        boolean flag=false;
+        // Initialize the session factory with configuration and annotated classes
+        SessionFactory sessionFactory = new Configuration().configure().addAnnotatedClass(Student.class).buildSessionFactory();
+        Session session = null;
+        Transaction transaction = null;
+        boolean flag = false;
 
-        try{
-            session=sessionFactory.openSession();
-            transaction=session.beginTransaction();
+        try {
+            // Open a session from the session factory
+            session = sessionFactory.openSession();
+            // Begin a transaction
+            transaction = session.beginTransaction();
 
+            // Create a new Student instance for update
             Student student = new Student();
-            student.setStudentId(4);
-            student.setStudentName("Rakhi_ke_chote_si_kali_choot");
-            student.setStudentAddress("Saheed Nagar ki randi");
-            student.setStudentEmail("rakhi@ke_chote_si_kali_choot.com");
+            student.setStudentId(4); // Set the ID of the student to update
+            student.setStudentName("New Name"); // Set new values for the student
+            student.setStudentAddress("New Address");
+            student.setStudentEmail("newemail@example.com");
 
-//            update
+            // Update the student in the database
             session.merge(student);
 
-//            delete
-//            session.remove(student);
-            flag=true;
-        }
-        catch (HibernateException err) {
-            err.printStackTrace();
+            // Uncomment the following line to delete the student instead
+            // session.remove(student);
+
+            flag = true; // Indicate success to commit the transaction
+        } catch (HibernateException err) {
+            err.printStackTrace(); // Handle Hibernate exceptions
         } catch (Exception err) {
-            err.printStackTrace();
+            err.printStackTrace(); // Handle other exceptions
         } finally {
-            // Step 8: Commit the transaction if flag is true, otherwise rollback
+            // Commit the transaction if flag is true, otherwise rollback
             if (flag) transaction.commit();
             else {
                 if (transaction != null) {
                     transaction.rollback();
                 }
             }
-            // Step 9: Close the session and SessionFactory
+            // Close the session
             session.close();
-//            sessionFactory.close();
+            // Uncomment the following line to close the session factory
+            // sessionFactory.close();
         }
-
     }
 }
