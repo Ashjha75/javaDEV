@@ -44,6 +44,9 @@ Hibernate requires a `hibernate.cfg.xml` file to configure the database connecti
     </session-factory>
 </hibernate-configuration>
 ```
+
+> 💡 **Note:** We can also configure Hibernate directly in Java configuration using `config.setProperty(propertyName, value)` and also we can use a `hibernate.properties` file for that.
+
 # Entity Class
 An entity class represents a table in your database. Use annotations like @Entity, @Table, and @Id to map class fields to table columns.
 
@@ -176,3 +179,49 @@ Hibernate provides a caching mechanism to improve performance by reducing the nu
 1. First-level cache: It's associated with the Session object and is enabled by default. It's used to reduce the number of SQL queries by storing objects in memory.
 2. Second-level cache: It's shared across multiple sessions and is used to cache objects across transactions. It's not enabled by default and requires a cache provider like Ehcache or Infinispan.
 3. Query cache: It's used to cache query results and is enabled by setting the `hibernate.cache.use_query_cache` property to true.
+
+###  L1 Cache Explanation  
+- This level of cache is created implicitly for every object for that session therefore for same request hibernate will not write the query again and again.
+- Hibernate will always check the L1 cache 1st than it will execute any query if there is any change in query then the new object will reside in L1 Cache not previous one.
+
+### L2 Cache Explanation
+- This level of cache is created for the whole application, and it is shared across multiple sessions.
+- It is not enabled by default, and we have to enable it by using some cache provider like Ehcache or Infinispan.
+- It is used to cache objects across transactions.
+- It is used to reduce the number of database queries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
