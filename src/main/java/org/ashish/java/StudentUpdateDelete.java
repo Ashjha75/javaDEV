@@ -16,6 +16,11 @@ public class StudentUpdateDelete {
 
     public static void main(String[] args) {
         // Initialize the session factory with configuration and annotated classes
+        /**
+         * explain: here 1st we have created a new Configuration object and then we have loaded the configuration from hibernate.cfg.xml file
+         * explain2: then we have added the annotated class Student to the configuration object(this maps the Student class to the studentTable in the database)
+         * explain3: then we have built the session factory from the configuration object
+         * **/
         SessionFactory sessionFactory = new Configuration().configure().addAnnotatedClass(Student.class).buildSessionFactory();
         Session session = null;
         Transaction transaction = null;
