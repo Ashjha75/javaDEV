@@ -31,7 +31,6 @@ public class StudentHibernate {
 
         // Step 5: Create a new Student instance
         Student student = new Student();
-        student.setStudentId(7);
         student.setStudentName("Rakhi_Ke_gol_gol_gal");
         student.setStudentAddress("Saheed Nagar");
         student.setStudentEmail("rakhi@Ke_gol_gol_gal.com");

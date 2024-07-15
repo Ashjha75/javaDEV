@@ -190,6 +190,77 @@ Hibernate provides a caching mechanism to improve performance by reducing the nu
 - It is used to cache objects across transactions.
 - It is used to reduce the number of database queries.
 
+# Hibernate Associate mapping:
+1. One to One Mapping in Hibernate
+2. One to Many Mapping in Hibernate
+3. Many to One Mapping in Hibernate
+4. Many to Many Mapping in Hibernate
+
+## One to One Mapping in Hibernate
+In one-to-one mapping, one entity is associated with another entity. 
+For example, a student can have only one address, and an address can be associated with only one student.
+This mapping can be done using the `@OneToOne` annotation and specifying the `cascade` type.
+
+Below example is for one to one mapping in hibernate:
+
+**Question Model**
+```java
+package org.ashish.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "questions")
+public class Question {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String questionText;
+
+    @OneToOne(mappedBy = "question", cascade = CascadeType.ALL)
+    private Answers answer;
+}
+```
+**Answer Model**
+```java
+package org.ashish.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "answers")
+public class Answers {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String answerText;
+
+    @OneToOne
+    @JoinColumn(name = "question_id")
+    private Question question;
+
+    // Constructors, getters, and setters
+}
+```
+**Main Class**
+```java
+Configuration configuration = new Configuration().configure();
+try (SessionFactory sessionFactory = configuration.buildSessionFactory();
+     Session session = sessionFactory.openSession()) {
+    Transaction transaction = session.beginTransaction();
+
+    Question question = new Question("What is Java?");
+    Answers answer = new Answers("Java is a programming language");
+
+    question.setAnswer(answer);
+    answer.setQuestion(question);
+
+    session.persist(question);
+    transaction.commit();
+}
+```
 
 
 

@@ -1,18 +1,20 @@
 package org.ashish.model;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import org.ashish.utils.alphanumericPrimaryKeygenerator;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "studentTable") //not required if table name is same as class name
 public class Student {
 
     @Id //primary key
-    @Column(name = "studentId") //not required if column name is same as field name
-    private int studentId;
+    @GeneratedValue(generator = "alphanumericPrimaryKeygenerator")
+    @GenericGenerator(name="alphanumericPrimaryKeygenerator", strategy = "org.ashish.utils.alphanumericPrimaryKeygenerator")
+    @Column(name = "studentId", unique = true, nullable = false, updatable = false)
+    private String studentId;
 
     private String studentName;
     private String studentAddress;
@@ -25,7 +27,7 @@ public class Student {
         System.out.println("Student object created for hibernate");
     }
 
-    public int getStudentId() {
+    public String getStudentId() {
         return studentId;
     }
 
@@ -53,7 +55,7 @@ public class Student {
         this.studentEmail = studentEmail;
     }
 
-    public void setStudentId(int studentId) {
+    public void setStudentId(String studentId) {
         this.studentId = studentId;
     }
 

@@ -34,7 +34,6 @@ public class StudentUpdateDelete {
 
             // Create a new Student instance for update
             Student student = new Student();
-            student.setStudentId(4); // Set the ID of the student to update
             student.setStudentName("New Name"); // Set new values for the student
             student.setStudentAddress("New Address");
             student.setStudentEmail("newemail@example.com");
