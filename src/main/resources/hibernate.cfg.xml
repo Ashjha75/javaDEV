@@ -18,8 +18,8 @@
         <property name="hbm2ddl.auto">create</property>
 <!--
     <mapping class="org.ashish.model.Student" />-->
-            <mapping class="org.ashish.model.Question" />
-            <mapping class="org.ashish.model.Answers" />
+            <mapping class="org.ashish.model.ManyAnswer" />
+            <mapping class="org.ashish.model.ManyQuestion" />
     </session-factory>
 
 </hibernate-configuration>

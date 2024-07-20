@@ -1,24 +1,23 @@
 package org.ashish.model;
+
 import jakarta.persistence.*;
-import org.ashish.model.Answers;
 
 @Entity
-@Table(name = "questions")
+@Table(name = "question")
 public class Question {
 
     @Id
+//    @Column(name = "question_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String questionText;
 
-    @OneToOne(mappedBy = "question", cascade = CascadeType.ALL)
+    @OneToOne( cascade = CascadeType.ALL)
+//    @JoinColumn(name = "answer_id", referencedColumnName = "id")
     private Answers answer;
 
+    // Constructors, getters, and setters
     public Question() {
-    }
-
-    public Question(String questionText) {
-        this.questionText = questionText;
     }
 
     public int getId() {
@@ -43,13 +42,6 @@ public class Question {
 
     public void setAnswer(Answers answer) {
         this.answer = answer;
-        if (answer != null) {
-            answer.setQuestion(this);
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "Question [id=" + id + ", questionText=" + questionText + ", answer=" + answer + "]";
+        answer.setQuestion(this); // Ensure the relationship is bidirectional
     }
 }

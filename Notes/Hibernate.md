@@ -261,7 +261,155 @@ try (SessionFactory sessionFactory = configuration.buildSessionFactory();
     transaction.commit();
 }
 ```
+## One to Many Mapping in Hibernate
+In one-to-many mapping, one entity is associated with multiple entities.
+For example, a department can have multiple employees, but an employee can belong to only one department.
+This mapping can be done using the `@OneToMany` annotation and specifying the `mappedBy` attribute.
 
+Below example is for one to many mapping in hibernate:
+```java
+package org.ashish.model;
+
+import jakarta.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "department")
+public class Department {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+
+    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
+    private List<Employee> employees;
+
+    // Constructors, getters, and setters
+}
+```
+```java
+package org.ashish.model;
+
+import jakarta.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "employee")
+public class Employee {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "department_id")
+    private Department department;
+
+    // Constructors, getters, and setters
+}
+```
+```java
+Configuration configuration = new Configuration().configure();
+try (SessionFactory sessionFactory = configuration.buildSessionFactory();
+     Session session = sessionFactory.openSession()) {
+    Transaction transaction = session.beginTransaction();
+
+    Department department = new Department("IT");
+    Employee employee1 = new Employee("John Doe");
+    Employee employee2 = new Employee("Jane Smith");
+
+    department.setEmployees(Arrays.asList(employee1, employee2));
+    employee1.setDepartment(department);
+    employee2.setDepartment(department);
+
+    session.persist(department);
+    transaction.commit();
+}
+```
+
+## Many to One Mapping in Hibernate
+In many-to-one mapping, multiple entities are associated with one entity.
+For example, multiple employees can belong to one department, but a department can have multiple employees.
+This mapping can be done using the `@ManyToOne` annotation and specifying the `@JoinColumn` attribute.  
+
+Example is above in one to many mapping.
+
+## Many to Many Mapping in Hibernate
+In many-to-many mapping, multiple entities are associated with multiple entities.
+For example, multiple students can enroll in multiple courses, and multiple courses can have multiple students.
+This mapping can be done using the `@ManyToMany` annotation and specifying the `@JoinTable` attribute.
+
+Below example is for many to many mapping in hibernate:
+```java
+package org.ashish.model;
+
+import jakarta.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "student")
+public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+
+    @ManyToMany
+    @JoinTable(name = "student_course",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id"))
+    private List<Course> courses;
+
+    // Constructors, getters, and setters
+}
+```
+```java
+package org.ashish.model;
+
+import jakarta.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "course")
+public class Course {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+
+    @ManyToMany(mappedBy = "courses")
+    private List<Student> students;
+
+    // Constructors, getters, and setters
+}
+```
+```java
+Configuration configuration = new Configuration().configure();
+try (SessionFactory sessionFactory = configuration.buildSessionFactory();
+     Session session = sessionFactory.openSession()) {
+    Transaction transaction = session.beginTransaction();
+
+    Student student1 = new Student("John Doe");
+    Student student2 = new Student("Jane Smith");
+
+    Course course1 = new Course("Java Programming");
+    Course course2 = new Course("Database Management");
+
+    student1.setCourses(Arrays.asList(course1, course2));
+    student2.setCourses(Arrays.asList(course1));
+
+    course1.setStudents(Arrays.asList(student1, student2));
+    course2.setStudents(Arrays.asList(student1));
+
+    session.persist(student1);
+    session.persist(student2);
+    transaction.commit();
+}
+```
 
 
 

@@ -39,7 +39,7 @@ public class oneToOneMapping {
             answer.setQuestion(question);
 
             session.persist(question);
-            session.persist(answer);
+//            session.persist(answer);
 //           Question ques= session.get(Question.class,1);
 //            System.out.println(ques);
             flag=true;
