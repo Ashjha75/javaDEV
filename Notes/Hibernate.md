@@ -410,30 +410,30 @@ try (SessionFactory sessionFactory = configuration.buildSessionFactory();
     transaction.commit();
 }
 ```
+#  (JPQL) 
+JPQL Stands for Java Persistence Query Language. It is used to write queries to perform CRUD operations on entities. It is similar to SQL but operates on objects and their properties instead of tables and columns.
+This is an abstraction or Specification of SQL queries. 
+HQL is one of the implementation of JPQL.
 
+# Hibernate Query Language (HQL)/(JPQL)
+Hibernate Query Language (HQL) is a powerful query language similar to SQL but operates on objects and their properties instead of tables and columns.
+The main advantage of Hql over normal sql query is that this is same for all type of sal vendor because we are dealing with entity and their properties not with table and columns directly.
 
+Some examples are:
 
+```genericsql
+sql> INSERT INTO emp (emp_id, emp_name, emp_salary) VALUES (1, 'John Doe', 50000);
+hql> INSERT INTO Employee (empId, empName, empSalary) VALUES (1, 'John Doe', 50000);
 
+sql> SELECT * FROM emp WHERE emp_id > 1 AND emp_id < 10;
+hql> FROM Employee WHERE empId > 1 AND empId < 10;
+   
+sql> UPDATE emp SET emp_salary = 60000 WHERE emp_id = 1;
+hql> UPDATE Employee SET empSalary = 60000 WHERE empId = 1;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+sql> DELETE FROM emp WHERE emp_id = 1;
+hql> DELETE FROM Employee WHERE empId = 1;
+```
 
 
 
