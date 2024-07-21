@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8fdc27b-2982-4b6b-8004-84b206754b65" name="Changes" comment="hql" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Hibernate" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ashjha75&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ashjha75/javaLearning.git&quot;,
+    &quot;accountId&quot;: &quot;4c92a3fe-f6cd-44b0-844b-78c8d43fc466&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2jBSuFjuIfc5R6EqbZmHWxSCZXX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.AllManyMapping.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StudentHibernate.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StudentRead.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StudentUpdateDelete.executor&quot;: &quot;Run&quot;,
+    &quot;Application.oneToOneMapping.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowProblems.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Mysql&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/DELL/Desktop/JAVA/HibernateLearning/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Desktop/JAVA/HibernateLearning&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="Application.StudentUpdateDelete">
+    <configuration name="AllManyMapping" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ashish.java.AllManyMapping" />
+      <module name="HibernateLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ashish.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentHibernate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ashish.java.StudentHibernate" />
+      <module name="HibernateLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ashish.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentRead" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ashish.java.StudentRead" />
+      <module name="HibernateLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ashish.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentUpdateDelete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ashish.java.StudentUpdateDelete" />
+      <module name="HibernateLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ashish.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="oneToOneMapping" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ashish.java.oneToOneMapping" />
+      <module name="HibernateLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ashish.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="powershell.exe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 2" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8084/HibernateLearning_war_exploded/" />
+      <deployment>
+        <artifact name="HibernateLearning:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/HibernateLearning_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="HibernateLearning:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StudentUpdateDelete" />
+        <item itemvalue="Application.StudentRead" />
+        <item itemvalue="Application.StudentHibernate" />
+        <item itemvalue="Application.oneToOneMapping" />
+        <item itemvalue="Application.AllManyMapping" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8fdc27b-2982-4b6b-8004-84b206754b65" name="Changes" comment="" />
+      <created>1720859200414</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720859200414</updated>
+      <workItem from="1720859201525" duration="8232000" />
+      <workItem from="1720883228696" duration="5918000" />
+      <workItem from="1720936204311" duration="4687000" />
+      <workItem from="1720944543733" duration="5866000" />
+      <workItem from="1720970655648" duration="5203000" />
+      <workItem from="1721023578362" duration="10264000" />
+      <workItem from="1721059301395" duration="3967000" />
+      <workItem from="1721457476821" duration="757000" />
+      <workItem from="1721458312068" duration="9021000" />
+      <workItem from="1721490141117" duration="4492000" />
+      <workItem from="1721541086864" duration="246000" />
+      <workItem from="1721541367266" duration="4564000" />
+      <workItem from="1721547466104" duration="810000" />
+    </task>
+    <task id="LOCAL-00001" summary="hibernate 1st commit">
+      <option name="closed" value="true" />
+      <created>1720891198019</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720891198020</updated>
+    </task>
+    <task id="LOCAL-00002" summary="hibernate 1st commit">
+      <option name="closed" value="true" />
+      <created>1720891746823</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720891746823</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit for crud operation and notes included">
+      <option name="closed" value="true" />
+      <created>1720947896055</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720947896055</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updated notes">
+      <option name="closed" value="true" />
+      <created>1720950492129</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720950492129</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated notes">
+      <option name="closed" value="true" />
+      <created>1720978021849</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720978021849</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new updates on hibernate">
+      <option name="closed" value="true" />
+      <created>1721060121116</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721060121116</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated base">
+      <option name="closed" value="true" />
+      <created>1721060460672</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721060460672</updated>
+    </task>
+    <task id="LOCAL-00008" summary="One to many many to one relation in hibernate">
+      <option name="closed" value="true" />
+      <created>1721492013214</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721492013214</updated>
+    </task>
+    <task id="LOCAL-00009" summary="hql">
+      <option name="closed" value="true" />
+      <created>1721495325124</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721495325124</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hibernate 1st commit" />
+    <MESSAGE value="Commit for crud operation and notes included" />
+    <MESSAGE value="Updated notes" />
+    <MESSAGE value="new updates on hibernate" />
+    <MESSAGE value="updated base" />
+    <MESSAGE value="One to many many to one relation in hibernate" />
+    <MESSAGE value="hql" />
+    <option name="LAST_COMMIT_MESSAGE" value="hql" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
