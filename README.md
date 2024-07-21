@@ -1,6 +1,6 @@
 # My SQL <img src="https://www.mysql.com/common/logos/powered-by-mysql-88x31.png" style="border-radius: 10px">
 
-> _for Cheatsheet reference :_  &nbsp; &nbsp;    [My Sql Cheatsheet](https://quickref.me/mysql)  
+> _for Cheatsheet reference :_  &nbsp; &nbsp;    [My Sql Cheatsheet](https://quickref.me/mysql)
 
 ***This is for only in depth explanation of the concepts.***
 ## Table of Contents
@@ -125,7 +125,7 @@ CREATE INDEX index_name
 ON table_name (column1, column2, ...);
 ```
 - **Drop Index**
-```sql  
+```sql
 DROP INDEX index_name
 ON table_name;
 ```
