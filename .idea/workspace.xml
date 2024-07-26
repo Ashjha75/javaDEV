@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8fdc27b-2982-4b6b-8004-84b206754b65" name="Changes" comment="hql" />
+    <list default="true" id="b8fdc27b-2982-4b6b-8004-84b206754b65" name="Changes" comment="hql">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09779803-3081-4bde-be33-bf727899ea7d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/09779803-3081-4bde-be33-bf727899ea7d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mysql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Mysql.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +43,9 @@
     &quot;accountId&quot;: &quot;4c92a3fe-f6cd-44b0-844b-78c8d43fc466&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d991892f-74a5-4ef9-8220-c7517f2f769d/console.sql" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -47,6 +56,7 @@
   <component name="ProblemsViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="selectedTabId" value="CurrentFile" />
+    <option name="showToolbar" value="false" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -204,6 +214,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SQLScriptSettings">
+    <option name="matrix">
+      <map>
+        <entry key="MYSQL.CreateComplete" value="CreateOrReplace=1" />
+      </map>
+    </option>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -233,6 +250,12 @@
       <workItem from="1721541086864" duration="246000" />
       <workItem from="1721541367266" duration="4564000" />
       <workItem from="1721547466104" duration="810000" />
+      <workItem from="1721571864522" duration="7084000" />
+      <workItem from="1721724419003" duration="4170000" />
+      <workItem from="1721890524642" duration="1549000" />
+      <workItem from="1721971244449" duration="117000" />
+      <workItem from="1721971388394" duration="1201000" />
+      <workItem from="1722010639265" duration="62000" />
     </task>
     <task id="LOCAL-00001" summary="hibernate 1st commit">
       <option name="closed" value="true" />
@@ -306,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721495325124</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="hql">
+      <option name="closed" value="true" />
+      <created>1721572634702</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721572634702</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1039,14 +1039,14 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="289" parent="1" name="mysql">
       <Grants>user|||mysql.session|localhost|SELECT|G</Grants>
-      <LastIntrospectionLocalTimestamp>2024-07-21.06:02:06</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-07-21.14:49:15</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="291" parent="1" name="students">
-      <LastIntrospectionLocalTimestamp>2024-07-21.06:02:44</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-07-21.14:49:15</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="292" parent="1" name="Ashish">
@@ -3700,7 +3700,7 @@ User</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="731" parent="335" name="answer_id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -3824,7 +3824,7 @@ User</ColNames>
       <Position>1</Position>
     </column>
     <column id="758" parent="339" name="question_id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
