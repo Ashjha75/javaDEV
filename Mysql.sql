@@ -82,17 +82,69 @@
 # SELECT * FROM payments;
 
 
+# ---------------------------------------------------** ALTER COMMANDS **------------------------------------------------------------
+#     NOte : WITH ALTER MYSQL PERFORMS AN ALTERTION BY COPYING THE TABLE TO A TEMPORARY TABLE, THEN DROPPING THE ORIGINAL TABLE AND RENAMING THE TEMPORARY TABLE TO THE ORIGINAL TABLE NAME
+# Adding and deleting table columns
 
+# ALTER TABLE users ADD userRole ENUM('admin', 'user') NOT NULL DEFAULT 'user';
+# -- to specify the position of the new column
+# ALTER TABLE users ADD userRole2 ENUM('admin', 'user') NOT NULL DEFAULT 'user' AFTER location;
+# -- to add a column at the beginning of the table
+# ALTER TABLE users ADD userRole3 ENUM('admin', 'user') NOT NULL DEFAULT 'user' FIRST;
 
+# -- to delete a column
+# ALTER TABLE users DROP COLUMN userRole4;
 
+# -- to rename a column
+# ALTER TABLE users CHANGE COLUMN userRole userRole4 ENUM('admin', 'user') NOT NULL DEFAULT 'user';
 
+# -- rename table name
+# RENAME TABLE users TO customers;
+/*or*/
+# ALTER TABLE customers RENAME  users;
 
+#-- change data type of a column
+# ALTER TABLE users MODIFY userRole2 VARCHAR(255) NOT NULL DEFAULT 'user';
+# DESC users;
 
+# SELECT * FROM users;
 
+#  ---------------------------------------------------** UPDATE COMMANDS **------------------------------------------------------------
+# -- update a single row
+# UPDATE users SET userName ='ASHISH' where userId = 1;
 
+# -- update multiple rows
+# UPDATE users SET password='Ashish' where userId IN (1,2);
 
+# -- update multiple columns
+# UPDATE users SET  userName='JOHNCENA', password='JOHNCENA' where userId = 1;
 
+# -------------------------------------------------------------------------------*** DELETE COMMAND ***-----------------------------------------------------
+# -- delete a single row
+# DELETE FROM users WHERE userId = 23;
 
+# -- delete multiple rows
+# DELETE FROM users WHERE userId IN (1,2);
 
+# -------------------------------------------------------------------------------*** SELECT COMMAND ***-----------------------------------------------------
+# -- select all columns
+# SELECT * FROM users;
 
+# -- select specific columns
+# SELECT userId, userName, email FROM users;
+
+# -- restrict numbers using LIMIT
+# SELECT * FROM users  LIMIT 2 ;
+
+# --- restrict numbers using LIMIT( this will skip first 2 rows and show next 10 rows means from 3 to 12)
+# SELECT * FROM users  LIMIT 2 , 10
+
+# -- restrict numbers using LIMIT and OFFSET( 2 rows after 10 rows means 11th and 12th row)
+# SELECT * FROM users  LIMIT 2 OFFSET 10;
+
+# --select distinct values
+# SELECT DISTINCT location FROM users;
+
+# -- select in descending order
+# SELECT * FROM users ORDER BY userId DESC;
 
