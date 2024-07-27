@@ -1,8 +1,12 @@
 # SHOW DATABASES ;
-
+# SHOW TABLES;
 # CREATE DATABASE IF NOT EXISTS walletDb;
 # use walletDb;
+#  SELECT * FROM users;
+#     ----- check structure of table
+#     DESCRIBE transactions;
 
+#     ----------------------------------------------------------------** CREATE COMMANDS **-----------------------------------------------------
 # CREATE TABLE IF NOT EXISTS users
 # (
 #     userId    INT AUTO_INCREMENT PRIMARY KEY,
@@ -15,15 +19,15 @@
 #     mobile    VARCHAR(15) UNIQUE  NOT NULL,
 #     location  VARCHAR(255)        NOT NULL
 # );
-CREATE TABLE IF NOT EXISTS transactions (
-                                            transactionId INT AUTO_INCREMENT PRIMARY KEY,
-                                            userId INT NOT NULL,
-                                            type ENUM('credit', 'debit') NOT NULL,
-                                            amount DECIMAL(10, 2) NOT NULL,
-                                            transactionDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                                            description VARCHAR(255),
-                                            FOREIGN KEY (userId) REFERENCES users(userId) ON DELETE CASCADE
-);
+# CREATE TABLE IF NOT EXISTS transactions (
+#     transactionId INT AUTO_INCREMENT PRIMARY KEY,
+#     userId INT NOT NULL,
+#     type ENUM('credit', 'debit') NOT NULL,
+#     amount DECIMAL(10, 2) NOT NULL,
+#     transactionDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+#     description VARCHAR(255),
+#     FOREIGN KEY (userId) REFERENCES users(userId) ON DELETE CASCADE
+# );
 # CREATE TABLE IF NOT EXISTS wallets (
 #     walletId INT AUTO_INCREMENT PRIMARY KEY,
 #     userId INT NOT NULL,
@@ -54,8 +58,35 @@ CREATE TABLE IF NOT EXISTS transactions (
 #     FOREIGN KEY (transactionId) REFERENCES transactions(transactionId) ON DELETE CASCADE
 # );
 
+#     ----------------------------------------------------------------** INSERT COMMANDS **-----------------------------------------------------
+
 # INSERT into users(userId ,userName, password, email,  age, mobile, location)
 # VALUES (3,'admin2', 'admin2', 'admin2@gmail.com', 25, '1324357890', 'India');
+# SELECT  * FROM users;
+
+# INSERT into transactions(userId, type, amount, description)
+# VALUES (1, 'credit', 1000.00, 'Initial deposit');
+# SELECT * FROM transactions;
+
+# INSERT INTO wallets(userId, balance, currency)
+# VALUES (1, 1000.00, 'USD');
+# SELECT * FROM wallets;
+
+# INSERT INTO cards(userId, cardNumber, cardHolderName, expiryDate, cvv)
+# VALUES
+# (1, '1234567890123456', 'John Doe', '2023-12-31', 123);
+# SELECT * FROM cards;
+
+# INSERT INTO payments(transactionId, recipient, paymentMethod, status)
+# VALUES (1, 'John Doe', 'wallet', 'completed');
+# SELECT * FROM payments;
+
+
+
+
+
+
+
 
 
 
