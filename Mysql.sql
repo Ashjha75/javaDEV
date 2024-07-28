@@ -147,4 +147,6 @@
 
 # -- select in descending order
 # SELECT * FROM users ORDER BY userId DESC;
+## --sort data with multiple columns
+SELECT  * FROM users ORDER BY userID,userName;
 

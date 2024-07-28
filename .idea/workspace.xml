@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8fdc27b-2982-4b6b-8004-84b206754b65" name="Changes" comment="hql" />
+    <list default="true" id="b8fdc27b-2982-4b6b-8004-84b206754b65" name="Changes" comment="hql">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mysql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Mysql.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -252,7 +255,8 @@
       <workItem from="1722010639265" duration="2140000" />
       <workItem from="1722060057814" duration="8898000" />
       <workItem from="1722089963190" duration="6035000" />
-      <workItem from="1722098826946" duration="709000" />
+      <workItem from="1722098826946" duration="2525000" />
+      <workItem from="1722177223579" duration="1994000" />
     </task>
     <task id="LOCAL-00001" summary="hibernate 1st commit">
       <option name="closed" value="true" />
