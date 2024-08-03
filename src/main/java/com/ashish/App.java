@@ -1,15 +1,14 @@
 package com.ashish;
 
+import com.ashish.config.AppConfig;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * Hello world!
- *
  */
-public class App
-{
-    public static void main( String[] args )
+public class App {
+  /*  public static void main( String[] args )
     {
 //        1st: Normal way of creating object
 
@@ -33,8 +32,22 @@ public class App
 //        System.out.println(obj.getLaptop());
 
 //        4th: constructor injection
-        ApplicationContext context= new ClassPathXmlApplicationContext("spring.xml");
-        Alien obj = (Alien) context.getBean("alien");
+//        ApplicationContext context= new ClassPathXmlApplicationContext("spring.xml");
+//        Alien obj = (Alien) context.getBean("alien");
+//        obj.code();
+
+//        5th:getting bean by type
+//        ApplicationContext context= new ClassPathXmlApplicationContext("spring.xml");
+//        Alien obj = context.getBean(Alien.class);
+//        obj.code();
+    }*/
+
+    //    Java based cofiguration
+    public static void main(String[] args) {
+
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        Alien obj = context.getBean(Alien.class);
         obj.code();
+        System.out.println(obj.getAge());
     }
 }

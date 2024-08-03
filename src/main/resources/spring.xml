@@ -7,17 +7,46 @@
 
     <!--    </bean>-->
     <!--    for setter we need to give the property value which use setter to set the value-->
-<!--    <bean id="alien" class="com.ashish.Alien">-->
-<!--&lt;!&ndash;        value will be used for primitive data&ndash;&gt;-->
-<!--        <property name="age" value="19"/>-->
-<!--        <property name="laptop" ref="lap"/>-->
-<!--    </bean>-->
+    <!--    <bean id="alien" class="com.ashish.Alien">-->
+    <!--&lt;!&ndash;        value will be used for primitive data&ndash;&gt;-->
+    <!--        <property name="age" value="19"/>-->
+    <!--        <property name="laptop" ref="lap"/>-->
+    <!--    </bean>-->
 
-<!--    for constructor we dont use property whe use constructor-arg-->
+    <!--    for constructor we dont use property whe use constructor-arg###### -->
     <bean id="alien" class="com.ashish.Alien">
-<!--      for a parameterized constructor there can be more than one parameters and with constructor-arg-->
-        <constructor-arg value="19"/>
-        <constructor-arg ref="lap"/>
+        <!--      for a parameterized constructor there can be more than one parameters and with constructor-arg the sequenct defines parameter-->
+        <!--        <constructor-arg value="19"/>-->
+        <!--        <constructor-arg ref="lap"/>-->
+
+        <!--        We can also change this by Type,index,name -->
+                <constructor-arg value="19" index="0"/>
+                <constructor-arg ref="desk" index="1"/>
+
+        <!--        <constructor-arg value="19" type="int"/>-->
+        <!--        <constructor-arg ref="lap" type="com.ashish.Laptop"/>-->
+
+        <!--Note for name in class we can also us the annotation on constructor @ConstructorProperties({"age", "laptop"})-->
+        <!--        <constructor-arg value="19" name="age"/>-->
+        <!--        <constructor-arg ref="lap" name="laptop"/>-->
+
     </bean>
     <bean id="lap" class="com.ashish.Laptop"></bean>
+    <bean id="desk" class="com.ashish.Desktop"></bean>
 </beans>
+
+<!--AutoWire: It is used to automatically inject the dependency of one bean into -->
+<!--another bean. It is used to remove the dependency of one bean on another bean.-->
+
+<!--lazy-init: It is used to create the object of a bean only when it is required.-->
+<!--It is used to improve the performance of the application.-->
+
+<!--Inner bean: It is a bean that is defined within the scope of another bean. It is defined inside the property of another bean.-->
+<!--<property lazy-init="true">-->
+<!--    <bean id="lap" class="com.ashish.Alien">-->
+<!--        <property name="age" value="19"/>-->
+<!--        <property name="laptop">-->
+<!--            <bean class="com.ashish.Laptop"></bean>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--</property>-->
