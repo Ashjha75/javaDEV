@@ -2,7 +2,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="alien" class="com.ashish.Alien">
+    <!--    by default this bean will be singleton means for many calls one object will be created-->
+    <!--    <bean id="alien" class="com.ashish.Alien" scope="prototype">-->
 
+    <!--    </bean>-->
+    <!--    for setter we need to give the property value which use setter to set the value-->
+<!--    <bean id="alien" class="com.ashish.Alien">-->
+<!--&lt;!&ndash;        value will be used for primitive data&ndash;&gt;-->
+<!--        <property name="age" value="19"/>-->
+<!--        <property name="laptop" ref="lap"/>-->
+<!--    </bean>-->
+
+<!--    for constructor we dont use property whe use constructor-arg-->
+    <bean id="alien" class="com.ashish.Alien">
+<!--      for a parameterized constructor there can be more than one parameters and with constructor-arg-->
+        <constructor-arg value="19"/>
+        <constructor-arg ref="lap"/>
     </bean>
+    <bean id="lap" class="com.ashish.Laptop"></bean>
 </beans>
