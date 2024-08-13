@@ -1,7 +1,7 @@
 # Some Basics Concept of spring core
 
-spring core is the basic of spring framework means it is horizontally scalled to all type of other module because spring
-is diided into many modules::
+spring core is the basic of spring framework means it is horizontally scaled to all type of other module because spring
+is divided into many modules::
 
 - `spring core `
 - `spring aop`
@@ -221,3 +221,13 @@ Now let's say we have a same example of `Vehicle` interface and `Car` and `Bike`
 into the market called `ElectricEngine` and we want to implement this engine in our code then we can easily do that by
 implementing the `ElectricEngine` class and we can use the `ElectricEngine` class in our code without changing the
 code of `Vehicle` interface and `Car` and `Bike` classes.
+
+# Spring Inversion of Control (IoC):
+Inversion of Control (IoC) is a design principle in which the control of objects creation and lifecycle is transferred
+to a container or framework.\
+
+> 📌 **Note:** To know more about the need of `IOC` and why above methods fails - [Link to IOC Need](Needs.md#ioc)
+
+
+
+
