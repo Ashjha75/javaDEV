@@ -7,10 +7,10 @@ is divided into many modules::
 - `spring aop`
 - `spring jdbc`
 - `spring orm` etc... \
-  but here main point is that Spring is very light weight and loosely coupled framework.
-  Means lets say if i have to work on persistence apllication than spring is modular enough that i just need to implemnt
-  `Spring core + Spring ORM` module and i am good to go. This is the real meaning of loosely coupled framework.
-  Its have all feature of heavy weight framework like EJB but it is very light weight and easy to use because of its
+  but here main point is that Spring is very lightweight and loosely coupled framework.
+  Means lets say if I have to work on persistence application than spring is modular enough that I just need to implement
+  `Spring core + Spring ORM` module and I am good to go. This is the real meaning of loosely coupled framework.
+  Its have all feature of heavyweight framework like EJB, but it is very lightweight and easy to use because of its
   modular nature.
 
 # Spring core (basics):
@@ -19,9 +19,9 @@ is divided into many modules::
 Few Classes are called Java Beans,Pojo(Plain Old Java Object) and some are called Component or Beans classes.
 ``
 
-- `Java Beans` : these class not contain any business logic and they are used to store the data using getter and setter.
+- `Java Beans` : these class not contain any business logic, and they are used to store the data using getter and setter.
 - `Pojo` : If any class that can be executed directly by Jdk without the need of 3rd party library is called Pojo.
-- `Component` : These classes are used to store the business logic and they are called beans because they are managed by
+- `Component` : These classes are used to store the business logic, and they are called beans because they are managed by
   spring container.
 
 # Strategy Pattern:
@@ -46,7 +46,7 @@ Relationship between two classes are
 - `HAS-A` : Composition             (Loosely Coupled)
 
 We should only go for `Inheritance` When we need all the behaviour of parent class in child class.
-If we need few behaviour of parent class in child class then we should go for `Composition`.
+If we need little behaviour of parent class in child class then we should go for `Composition`.
 
 - `Composition vs. inheritance`: Most use cases can be solved through composition rather than inheritance, and use of
   composition is recommended when all services are not required.
@@ -108,11 +108,11 @@ class B extends A {
 }
 ```
 
-But here `Composition` comes into picture and it is the best way to solve this problem because in composition we can use
+But here `Composition` comes into picture, and it is the best way to solve this problem because in composition we can use
 the object of class `A` in class `B` and we can call the method `m1()` of class `A` in class `B` and if the return type
 of
 method `m1()` is changed in class `A` then it will not affect the class `B` because class `B` is using the object of
-class so we can directly
+class, so we can directly
 typecast the method `m1()` of class `A` in class `B` and it will not affect the class `B` .
 
 ```java
@@ -211,7 +211,7 @@ class Client {
 }
 ```
 now this is totally dependent on interface no on the logic of implementation of startEngine() method.
-So in future if i want to make the Truck class and i want to implement the Vehicle interface then i can easily do that.
+So in future if I want to make the Truck class and I want to implement the Vehicle interface then I can easily do that.
 
 # Code should be open for extension but closed for modification:
 This means that the code should be written in such a way that it should be open for extension but closed for
@@ -219,7 +219,7 @@ modification.\
 Example::
 Now let's say we have a same example of `Vehicle` interface and `Car` and `Bike` classes and  now a new type of engine came 
 into the market called `ElectricEngine` and we want to implement this engine in our code then we can easily do that by
-implementing the `ElectricEngine` class and we can use the `ElectricEngine` class in our code without changing the
+implementing the `ElectricEngine` class, and we can use the `ElectricEngine` class in our code without changing the
 code of `Vehicle` interface and `Car` and `Bike` classes.
 
 # Spring Inversion of Control (IoC):
