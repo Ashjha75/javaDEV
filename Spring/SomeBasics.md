@@ -226,7 +226,7 @@ code of `Vehicle` interface and `Car` and `Bike` classes.
 Inversion of Control (IoC) is a design principle in which the control of objects creation and lifecycle is transferred
 to a container or framework.\
 
-> 📌 **Note:** To know more about the need of `IOC` and why above methods fails - [Link to IOC Need](Needs.md#ioc)
+> 📌 **Note:** To know more about the need of `IOC` and why the above methods fails - [Link to IOC Need](Needs.md#ioc)
 
 
 
