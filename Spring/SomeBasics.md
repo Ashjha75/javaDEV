@@ -228,6 +228,56 @@ to a container or framework.\
 
 > 📌 **Note:** To know more about the need of `IOC` and why the above methods fails - [Link to IOC Need](Needs.md#ioc)
 
+IoC is a design principle where an object's dependencies are provided externally by a container, rather than the object creating or locating these dependencies itself. In Spring, dependencies are injected via constructor arguments, factory methods, or properties after object creation. This approach reverses the traditional control flow, where the object would typically manage its dependencies directly.
+
+**Key Point** : The key advantage of IoC is that it allows objects to declare their dependencies without managing them directly, promoting better separation of concerns and making code more modular and testable.
+
+### Types of IOC
+1. Dependency lookup
+    * Dependency Pull
+    * Contextual Dependency Lookup
+2. Dependency Injection
+    * Setter Injection
+    * Constructor Injection
+
+## Dependency Lookup
+Old way of getting the dependencies from the container. In this technic if a class needs another dependent 
+object; it will ask or write the code for getting the dependency .
+
+#### 1) Dependency Pull
+Dependency Pull refers to a method where an object explicitly retrieves its dependencies from the Spring container rather than having them injected automatically.
+eg. fetching connection pull from the container.
+#### 2) Contextual Dependency Lookup
+Contextual Dependency Lookup refers to a method where an object retrieves its dependencies based on the context in which it is created. This allows for more fine-grained control over the dependencies that are retrieved.
+In this both are agreed on single concept/Context.
+eg. servelet config will be injected in servelet context by the container.
+
+##  Dependency Injection
+Dependency Injection is a design pattern where an object's dependencies are provided to it by an external entity, rather than the object creating or locating its dependencies itself.
+
+#### 1) Setter Injection
+Setter Injection involves providing dependencies through setter methods after the object has been instantiated. This method allows the object to be created first and then its dependencies to be injected.
+
+#### 2) Constructor Injection
+Constructor Injection involves passing dependencies to a class through its constructor. When a Spring container creates an instance of the class, it invokes the constructor with the required dependencies.
+
+When we create a `BeanFactory object` classPathResource will look for the application-context.xml under the class path of ouur
+project and loads and gives it as an input XmlBeanFactory will take the xml and performs well-formed validation, once it is well-formed it will place the Xml into Jvm memory.
+This loaction where the spring beans object and its metadata is placed is called core container or ioc container.
+Ioc container is just a logical memory partition in which our spring beans will be maintained.(Similar to hashmap data structure)
+
+The  Xml will be placed as in-memory metadata in the ioc container and gives the reference of BeanFactory object to us. 
+When we call factory.getBean("beanName"), then the BeanFactory goes into its in-memory metadata of the IOC container search for the BeanFactory goes into its
+in-memory metadata of the IOC container search for the bean reference with that id. If found it will
+create the object of the class by calling new Operator and place the object in the Ioc container with the given id and return the reference of the object to us.
+
+## Constructor Vs Setter Injection
+
+| Constructor Injection                                                                                                                     | Setter Injection                                                                                                  |
+|-------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| At the time of creating your target class object, the dependent objects are injected (can be accessed in the constructor of target class) | After creating the target class object, the dependent objects are injected (can be accessed using setter methods) |
+| Here all the dependent objects are mandatory to be injected. otherwise `BeanCreationException` will be thrown                             | Here there is no need of all the dependent objects; they are all optional                                         |
+| If classes have cyclic dependency via constructor, these dependent beans cannot be configured through Constructor Injection.              | Cyclic Dependencies are allowed here                                                                              |
 
 
 
