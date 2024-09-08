@@ -11,15 +11,17 @@ import java.util.List;
 
 @RestController
 public class EmpController {
-    List<EmployeeModel> employees =new ArrayList<EmployeeModel>();
+    @Autowired
+    EmployeeService employeeService =new EmployeeServiceImpl();
+//    List<EmployeeModel> employees =new ArrayList<EmployeeModel>();
     @GetMapping("employees")
     public List<EmployeeModel> getAllEmployees() {
-        return employees;
+        return employeeSevice.readEmployeeds();
     }
 
     @PostMapping("employees")
     public String CreateEmployee(@RequestBody EmployeeModel employee){
-        employees.add(employee);
+        employees.createEmployee(employee);
         return "Employee added successfully";
     }
 }
