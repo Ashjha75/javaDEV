@@ -10,5 +10,5 @@ public class EmployeeModel {
     private double salary;
     private String email;
     private int age;
-    private int phoneNumber;
+    private String phoneNumber;
 }

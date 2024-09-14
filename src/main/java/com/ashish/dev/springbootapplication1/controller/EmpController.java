@@ -25,7 +25,7 @@ public class EmpController {
     }
 
     @DeleteMapping("employees/{id}")
-    public String deleteEmployee(@PathVariable int id) {
+    public String deleteEmployee(@PathVariable Long id) {
         if (employeeService.deleteEmployee(id)) {
             return "Employee deleted successfully";
         } else {

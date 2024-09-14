@@ -10,6 +10,7 @@ import java.util.List;
 public interface EmployeeService {
     String createEmployee(EmployeeModel employee);
     List<EmployeeModel> readEmployees();
+    EmployeeModel readEmployee(Long id);
     boolean updateEmployee(EmployeeModel employee);
-    boolean deleteEmployee(int id);
+    boolean deleteEmployee(Long id);
 }
