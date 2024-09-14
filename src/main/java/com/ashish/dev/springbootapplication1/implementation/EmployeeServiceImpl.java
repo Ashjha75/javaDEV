@@ -75,16 +75,22 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public boolean updateEmployee(EmployeeModel employee) {
-        logger.info("Updating employee with ID: {}", employee.getId());
+public boolean updateEmployee(EmployeeModel employee) {
+    logger.info("Updating employee with ID: {}", employee.getId());
+    try {
         if (employeeRepository.existsById(employee.getId())) {
             EmployeeEntity employeeEntity = new EmployeeEntity();
             BeanUtils.copyProperties(employee, employeeEntity);
             employeeRepository.save(employeeEntity);
             logger.info("Employee updated successfully");
             return true;
+        } else {
+            logger.warn("Employee with ID: {} not found", employee.getId());
+            return false;
         }
-        logger.warn("Employee with ID: {} not found", employee.getId());
+    } catch (Exception e) {
+        logger.error("Error updating employee with ID: {}", employee.getId(), e);
         return false;
     }
+}
 }
