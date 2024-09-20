@@ -97,7 +97,7 @@ classDiagram
     Service --> Model : converts data
     Controller --> Client : sends HTTP response
 
-
+```
 ### Annotations Used in a Spring Boot CRUD Application
 
 #### 1. **Spring Boot Application Setup**
