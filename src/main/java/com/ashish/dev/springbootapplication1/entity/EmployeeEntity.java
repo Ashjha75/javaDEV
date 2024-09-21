@@ -6,6 +6,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -21,4 +24,6 @@ public class EmployeeEntity {
     private String email;
     private int age;
     private String phoneNumber;
+
+//    connect to work entity
 }
