@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ashish.dev</groupId>
-    <artifactId>SpringBootApplication1</artifactId>
+    <artifactId>springbootapplication1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SpringBootApplication1</name>
+    <name>springbootapplication1</name>
     <description>SpringBootApplication1</description>
     <url/>
     <licenses>
