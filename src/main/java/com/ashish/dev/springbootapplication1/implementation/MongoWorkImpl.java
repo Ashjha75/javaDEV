@@ -42,4 +42,9 @@ public class MongoWorkImpl implements MongoWorkService {
             return "Error occurred while adding work: " + e.getMessage();
         }
     }
+
+    @Override
+    public Boolean updateWork(MongoWorkModel work) {
+        return null;
+    }
 }

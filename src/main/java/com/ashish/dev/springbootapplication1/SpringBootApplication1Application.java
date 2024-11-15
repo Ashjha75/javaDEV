@@ -10,7 +10,7 @@ public class SpringBootApplication1Application {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootApplication1Application.class, args);
-        System.out.println("Just checking");
+        System.out.println("Working fine ✌️😎👌");
     }
 //TODO: Just checking the todo
 

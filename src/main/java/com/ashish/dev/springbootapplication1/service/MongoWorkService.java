@@ -13,6 +13,6 @@ public interface MongoWorkService {
 
     String createWork(MongoWorkModel work);
 
-    boolean updateWork(MongoWorkModel work);
+    Boolean updateWork(MongoWorkModel work);
 //    boolean deleteWork(ObjectId id);
 }
