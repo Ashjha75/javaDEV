@@ -87,23 +87,23 @@ public class MongoEmplServiceImpl implements MongoEmplServices {
         }
     }
 
- @Override
-public ResponseEntity<MongoEmplModel> getEmployeeById(ObjectId id) {
-    try {
-        if (id == null) {
-            return ResponseEntity.badRequest().body(null);
+    @Override
+    public ResponseEntity<MongoEmplModel> getEmployeeById(ObjectId id) {
+        try {
+            if (id == null) {
+                return ResponseEntity.badRequest().body(null);
+            }
+
+            MongoEmpEntity employeeEntity = mongoEmployRepository.findById(id)
+                    .orElseThrow(() -> new exception("Employee not found with ID: " + id));
+
+            MongoEmplModel employeeModel = new MongoEmplModel();
+            BeanUtils.copyProperties(employeeEntity, employeeModel);
+            return ResponseEntity.ok(employeeModel);
+        } catch (exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
-
-        MongoEmpEntity employeeEntity = mongoEmployRepository.findById(id)
-                .orElseThrow(() -> new exception("Employee not found with ID: " + id));
-
-        MongoEmplModel employeeModel = new MongoEmplModel();
-        BeanUtils.copyProperties(employeeEntity, employeeModel);
-        return ResponseEntity.ok(employeeModel);
-    } catch (exception e) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-    } catch (Exception e) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
     }
-}
 }

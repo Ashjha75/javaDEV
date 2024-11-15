@@ -1,8 +1,7 @@
 package com.ashish.dev.springbootapplication1.controller;
 
-import com.ashish.dev.springbootapplication1.model.MongoEmplModel;
-import com.ashish.dev.springbootapplication1.service.MongoWorkService;
 import com.ashish.dev.springbootapplication1.model.MongoWorkModel;
+import com.ashish.dev.springbootapplication1.service.MongoWorkService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

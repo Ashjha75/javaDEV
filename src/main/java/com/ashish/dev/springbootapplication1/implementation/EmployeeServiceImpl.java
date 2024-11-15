@@ -1,10 +1,12 @@
 // EmployeeServiceImpl.java
 package com.ashish.dev.springbootapplication1.implementation;
 
-import com.ashish.dev.springbootapplication1.model.EmployeeModel;
-import com.ashish.dev.springbootapplication1.service.EmployeeService;
 import com.ashish.dev.springbootapplication1.entity.EmployeeEntity;
+import com.ashish.dev.springbootapplication1.model.EmployeeModel;
 import com.ashish.dev.springbootapplication1.repository.EmployeeRepository;
+import com.ashish.dev.springbootapplication1.service.EmployeeService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,8 +14,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -75,22 +75,22 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-public boolean updateEmployee(EmployeeModel employee) {
-    logger.info("Updating employee with ID: {}", employee.getId());
-    try {
-        if (employeeRepository.existsById(employee.getId())) {
-            EmployeeEntity employeeEntity = new EmployeeEntity();
-            BeanUtils.copyProperties(employee, employeeEntity);
-            employeeRepository.save(employeeEntity);
-            logger.info("Employee updated successfully");
-            return true;
-        } else {
-            logger.warn("Employee with ID: {} not found", employee.getId());
+    public boolean updateEmployee(EmployeeModel employee) {
+        logger.info("Updating employee with ID: {}", employee.getId());
+        try {
+            if (employeeRepository.existsById(employee.getId())) {
+                EmployeeEntity employeeEntity = new EmployeeEntity();
+                BeanUtils.copyProperties(employee, employeeEntity);
+                employeeRepository.save(employeeEntity);
+                logger.info("Employee updated successfully");
+                return true;
+            } else {
+                logger.warn("Employee with ID: {} not found", employee.getId());
+                return false;
+            }
+        } catch (Exception e) {
+            logger.error("Error updating employee with ID: {}", employee.getId(), e);
             return false;
         }
-    } catch (Exception e) {
-        logger.error("Error updating employee with ID: {}", employee.getId(), e);
-        return false;
     }
-}
 }
