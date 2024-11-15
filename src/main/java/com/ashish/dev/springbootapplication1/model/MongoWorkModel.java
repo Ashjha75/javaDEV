@@ -19,8 +19,5 @@ public class MongoWorkModel {
     @NotBlank(message = "Status is mandatory")
     private String status;
 
-    @NotNull(message = "AssignedTo list cannot be null")
-    private List<String> assignedTo;
-
     private Date targetDate;
 }

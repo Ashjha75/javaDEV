@@ -3,7 +3,10 @@ package com.ashish.dev.springbootapplication1.entity;
 import lombok.Data;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
 
 @Data
 @Document(collection = "employees")
@@ -16,4 +19,7 @@ public class MongoEmpEntity {
     private String email;
     private int age;
     private String phoneNumber;
+
+    @DBRef
+    private List<MongoWorkEntity> workEntities;
 }

@@ -1,10 +1,9 @@
 package com.ashish.dev.springbootapplication1.controller;
 
+import com.ashish.dev.springbootapplication1.model.MongoEmplModel;
 import com.ashish.dev.springbootapplication1.service.MongoWorkService;
 import com.ashish.dev.springbootapplication1.model.MongoWorkModel;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +20,15 @@ public class MongoWorkController {
     @GetMapping("/work")
     public List<MongoWorkModel> getAllWorks() {
         return mongoWorkService.getAllWorks();
+    }
+
+    @PostMapping("/work")
+    public String createWork(@RequestBody MongoWorkModel work) {
+        return mongoWorkService.createWork(work);
+    }
+
+    @PutMapping("/work")
+    public boolean updateWork(@RequestBody MongoWorkModel work) {
+        return mongoWorkService.updateWork(work);
     }
 }

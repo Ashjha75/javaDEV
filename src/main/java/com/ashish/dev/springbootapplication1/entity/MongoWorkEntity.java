@@ -2,6 +2,7 @@ package com.ashish.dev.springbootapplication1.entity;
 
 import lombok.Data;
 import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,8 +16,9 @@ import java.util.List;
 public class MongoWorkEntity {
 
     @org.springframework.data.annotation.Id
-    private ObjectId _id;
+    private ObjectId _id = new ObjectId();
 
+    @Indexed(unique = true)
     @NotBlank(message = "Title is mandatory")
     private String title;
 
@@ -26,8 +28,6 @@ public class MongoWorkEntity {
     @NotBlank(message = "Status is mandatory")
     private String status;
 
-    @NotNull(message = "AssignedTo list cannot be null")
-    private List<String> assignedTo;
 
     private Date targetDate;
 
